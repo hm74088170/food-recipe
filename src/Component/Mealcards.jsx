@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 const Mealcards = ({ detail }) => {
-  // 🟡 Initial state: show gentle prompt
+  
   if (detail === undefined) {
     return (
       <div className="text-center text-gray-400 mt-10 text-lg">
@@ -11,7 +11,7 @@ const Mealcards = ({ detail }) => {
     );
   }
 
-  // 🔴 No results: show "Data Not Found"
+
   if (detail === null) {
     return (
       <div className="text-center text-gray-600 text-xl font-semibold mt-10">
@@ -20,7 +20,7 @@ const Mealcards = ({ detail }) => {
     );
   }
 
-  // ✅ Found meals: render cards
+  
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-6">
       {detail.map((curItem) => (
